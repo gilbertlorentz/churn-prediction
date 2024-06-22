@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Predicting Churn</h1>
+        <form id="inputForm">
+            <div class="row">
+                <!-- Column 1 -->
+                <div class="col-md-6">
+                    <!-- State -->
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select class="form-control" id="state" required>
+                            <option value="">Select a state</option>
+                            <option value="0">AL</option>
+                            <option value="1">AK</option>
+                            <option value="2">AZ</option>
+                            <option value="3">AR</option>
+                            <option value="4">CA</option>
+                            <option value="5">CO</option>
+                            <option value="6">CT</option>
+                            <option value="7">DE</option>
+                            <option value="8">FL</option>
+                            <option value="9">GA</option>
+                            <option value="10">HI</option>
+                            <option value="11">ID</option>
+                            <option value="12">IL</option>
+                            <option value="13">IN</option>
+                            <option value="14">IA</option>
+                            <option value="15">KS</option>
+                            <option value="16">KY</option>
+                            <option value="17">LA</option>
+                            <option value="18">ME</option>
+                            <option value="19">MD</option>
+                            <option value="20">MA</option>
+                            <option value="21">MI</option>
+                            <option value="22">MN</option>
+                            <option value="23">MS</option>
+                            <option value="24">MO</option>
+                            <option value="25">MT</option>
+                            <option value="26">NE</option>
+                            <option value="27">NV</option>
+                            <option value="28">NH</option>
+                            <option value="29">NJ</option>
+                            <option value="30">NM</option>
+                            <option value="31">NY</option>
+                            <option value="32">NC</option>
+                            <option value="33">ND</option>
+                            <option value="34">OH</option>
+                            <option value="35">OK</option>
+                            <option value="36">OR</option>
+                            <option value="37">PA</option>
+                            <option value="38">RI</option>
+                            <option value="39">SC</option>
+                            <option value="40">SD</option>
+                            <option value="41">TN</option>
+                            <option value="42">TX</option>
+                            <option value="43">UT</option>
+                            <option value="44">VT</option>
+                            <option value="45">VA</option>
+                            <option value="46">WA</option>
+                            <option value="47">WV</option>
+                            <option value="48">WI</option>
+                            <option value="49">WY</option>
+                        </select>
+                    </div>
+                    <!-- Account Length -->
+                    <div class="form-group">
+                        <label for="accountLength">Account Length</label>
+                        <input type="number" class="form-control" id="accountLength" min="1" max="200"
+                            placeholder="Enter Account Length (1-200)" required>
+                    </div>
+                    <!-- Area Code -->
+                    <div class="form-group">
+                        <label for="areaCode">Area Code</label>
+                        <select class="form-control" id="areaCode" required>
+                            <option value="">Select an area code</option>
+                            <option value="806">806</option>
+                            <option value="836">836</option>
+                            <option value="777">777</option>
+                            <option value="878">878</option>
+                            <option value="866">866</option>
+                            <option value="737">737</option>
+                            <option value="766">766</option>
+                            <option value="657">657</option>
+                            <option value="676">676</option>
+                            <option value="827">827</option>
+                            <option value="716">716</option>
+                            <option value="786">786</option>
+                            <option value="778">778</option>
+                            <option value="788">788</option>
+                            <option value="787">787</option>
+                            <option value="736">736</option>
+                            <option value="686">686</option>
+                            <option value="876">876</option>
+                            <option value="858">858</option>
+                            <option value="877">877</option>
+                            <option value="776">776</option>
+                            <option value="797">797</option>
+                            <option value="707">707</option>
+                            <option value="677">677</option>
+                            <option value="727">727</option>
+                            <option value="758">758</option>
+                            <option value="659">659</option>
+                            <option value="678">678</option>
+                            <option value="848">848</option>
+                            <option value="658">658</option>
+                            <option value="798">798</option>
+                            <option value="847">847</option>
+                            <option value="868">868</option>
+                        </select>
+                    </div>
+                    <!-- Int'l Plan -->
+                    <div class="form-group">
+                        <label for="intlPlan">Int'l Plan</label>
+                        <select class="form-control" id="intlPlan" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- VMail Plan -->
+                    <div class="form-group">
+                        <label for="vmailPlan">VMail Plan</label>
+                        <select class="form-control" id="vmailPlan" required>
+                            <option value="">Select an option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <!-- VMail Message -->
+                    <div class="form-group">
+                        <label for="vmailMessage">VMail Message</label>
+                        <input type="number" class="form-control" id="vmailMessage" min="0" max="1300"
+                            placeholder="Enter VMail Message (0-1300)" required>
+                    </div>
+                    <!-- Day Mins -->
+                    <div class="form-group">
+                        <label for="dayMins">Day Mins</label>
+                        <input type="number" step="0.01" class="form-control" id="dayMins" min="0" max="17"
+                            placeholder="Enter Day Mins (0-17)" required>
+                    </div>
+                    <!-- Day Calls -->
+                    <div class="form-group">
+                        <label for="dayCalls">Day Calls</label>
+                        <input type="number" class="form-control" id="dayCalls" min="0" max="10"
+                            placeholder="Enter Day Calls (0-10)" required>
+                    </div>
+
+                </div>
+
+                <!-- Column 2 -->
+                <div class="col-md-6">
+                    <!-- Eve Mins -->
+                    <div class="form-group">
+                        <label for="eveMins">Eve Mins</label>
+                        <input type="number" step="0.01" class="form-control" id="eveMins" min="0" max="14"
+                            placeholder="Enter Eve Mins (0-14)" required>
+                    </div>
+                    <!-- Eve Calls -->
+                    <div class="form-group">
+                        <label for="eveCalls">Eve Calls</label>
+                        <input type="number" class="form-control" id="eveCalls" min="0" max="14"
+                            placeholder="Enter Eve Calls (0-14)" required>
+                    </div>
+                    <!-- Night Mins -->
+                    <div class="form-group">
+                        <label for="nightMins">Night Mins</label>
+                        <input type="number" step="0.01" class="form-control" id="nightMins" min="0" max="10"
+                            placeholder="Enter Night Mins (0-10)" required>
+                    </div>
+                    <!-- Night Calls -->
+                    <div class="form-group">
+                        <label for="nightCalls">Night Calls</label>
+                        <input type="number" class="form-control" id="nightCalls" min="0" max="550"
+                            placeholder="Enter Night Calls (0-550)" required>
+                    </div>
+                    <!-- Intl Mins -->
+                    <div class="form-group">
+                        <label for="intlMins">Intl Mins</label>
+                        <input type="number" step="0.01" class="form-control" id="intlMins" min="0" max="9"
+                            placeholder="Enter Intl Mins (0-9)" required>
+                    </div>
+                    <!-- Intl Calls -->
+                    <div class="form-group">
+                        <label for="intlCalls">Intl Calls</label>
+                        <input type="number" class="form-control" id="intlCalls" min="0" max="12"
+                            placeholder="Enter Intl Calls (0-12)" required>
+                    </div>
+                    <!-- CustServ Calls -->
+                    <div class="form-group">
+                        <label for="custServCalls">CustServ Calls</label>
+                        <input type="number" class="form-control" id="custServCalls" min="0" max="13"
+                            placeholder="Enter CustServ Calls (0-13)" required>
+                    </div>
+                    <!-- Result Placeholder -->
+                    <div class="form-group" id="resultPlaceholder">
+                        <label for="result"><strong>Result</strong></label>
+                        <input type="text" class="form-control" id="result" readonly>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit Button -->
+            <div class="text-center mt-3 mb-5">
+                <button type="submit" class="btn btn-primary">Submit Here!</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('inputForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // const stateMap = {
+            //     "PA": 0, "SC": 1, "MO": 2, "WY": 3, "VA": 4, "IN": 5, "LA": 6, "AL": 7, "CA": 8, "RI": 9, "GA": 10, "ND": 11, "MS": 12, "NY": 13, "NJ": 14, 
+            //     "NM": 15, "ID": 16, "DE": 17, "IL": 18, "WA": 19, "UT": 20, "MI": 21, "WI": 22, "MA": 23, "MN": 24, "WV": 25, "OK": 26, "FL": 27, "NH": 28, 
+            //     "CO": 29, "HI": 30, "IA": 31, "NE": 32, "KY": 33, "AZ": 34, "SD": 35, "OH": 36, "MT": 37, "NC": 38, "ME": 39, "CT": 40, "TX": 41, "MD": 42, 
+            //     "NV": 43, "DC": 44, "AR": 45, "OR": 46, "KS": 47, "AK": 48, "TN": 49, "VT": 50
+            // };
+
+            const state = parseInt(document.getElementById('state').value) || 0;
+            const accountLength = parseInt(document.getElementById('accountLength').value) || 0;
+            const areaCode = parseInt(document.getElementById('areaCode').value) || 0;
+            const intlPlan = document.getElementById('intlPlan').value === "yes" ? 1 : 0;
+            const vmailPlan = document.getElementById('vmailPlan').value === "yes" ? 1 : 0;
+            const vmailMessage = parseInt(document.getElementById('vmailMessage').value) || 0;
+            const dayMins = parseFloat(document.getElementById('dayMins').value) || 0;
+            const dayCalls = parseInt(document.getElementById('dayCalls').value) || 0;
+            const eveMins = parseFloat(document.getElementById('eveMins').value) || 0;
+            const eveCalls = parseInt(document.getElementById('eveCalls').value) || 0;
+            const nightMins = parseFloat(document.getElementById('nightMins').value) || 0;
+            const nightCalls = parseInt(document.getElementById('nightCalls').value) || 0;
+            const intlMins = parseFloat(document.getElementById('intlMins').value) || 0;
+            const intlCalls = parseInt(document.getElementById('intlCalls').value) || 0;
+            const custServCalls = parseInt(document.getElementById('custServCalls').value) || 0;
+
+            const resultData = {
+                "data": [
+                    state,
+                    accountLength,
+                    areaCode,
+                    intlPlan,
+                    vmailPlan,
+                    vmailMessage,
+                    dayMins,
+                    dayCalls,
+                    eveMins,
+                    eveCalls,
+                    nightMins,
+                    nightCalls,
+                    intlMins,
+                    intlCalls,
+                    custServCalls
+                ]
+            };
+
+            // Send form data to API (using a placeholder URL)
+            fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(resultData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                    // Extract only the "data" part from the response
+                    const responseData = {
+                        data: data.data
+                    };
+                    // Display the result in the result input field
+                    document.getElementById('result').value = JSON.stringify(responseData);
+            })
+            .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('result').value = 'An error occurred';
+            });
+
+        });
+    </script>
+</body>
+
+</html>
